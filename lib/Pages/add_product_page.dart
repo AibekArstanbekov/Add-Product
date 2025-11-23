@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_new_projeckt/widgets/drop_down_btn.dart';
 
 class AddProductPage extends StatelessWidget {
   const AddProductPage({super.key});
@@ -61,6 +62,39 @@ class AddProductPage extends StatelessWidget {
                   label: Text("Product Price"),
                   hintText: "Enter Your Product Price",
                 ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Flexible(
+                    child: DropDownBtn(
+                      items: ["Cate1", "Cate2", "Cate3"],
+                      selectedItemText: "Category",
+                      onSelected: (selectedValue) {
+                        print(selectedValue);
+                      },
+                    ),
+                  ),
+                  Flexible(
+                    child: DropDownBtn(
+                      items: ["Brand1", "Brand2", "Brand3"],
+                      selectedItemText: "Brand",
+                      onSelected: (selectedValue) {
+                        print(selectedValue);
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Text("Offer Product ?"),
+              SizedBox(height: 20),
+              DropDownBtn(
+                items: ["true", "false"],
+                selectedItemText: "Offer ?",
+                onSelected: (selectedValue) {
+                  print(selectedValue);
+                },
               ),
             ],
           ),
