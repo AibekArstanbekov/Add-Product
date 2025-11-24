@@ -23,6 +23,7 @@ class AddProductPage extends StatelessWidget {
                   color: Colors.indigoAccent,
                 ),
               ),
+              SizedBox(height: 30),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -32,7 +33,7 @@ class AddProductPage extends StatelessWidget {
                   hintText: "Enter Your Product Name",
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -43,7 +44,7 @@ class AddProductPage extends StatelessWidget {
                 ),
                 maxLines: 4,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -53,7 +54,7 @@ class AddProductPage extends StatelessWidget {
                   hintText: "Enter Your Image URL",
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -63,7 +64,7 @@ class AddProductPage extends StatelessWidget {
                   hintText: "Enter Your Product Price",
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Row(
                 children: [
                   Flexible(
@@ -86,15 +87,27 @@ class AddProductPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
-              Text("Offer Product ?"),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
+              Text(
+                "Offer Product ?",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 30),
               DropDownBtn(
                 items: ["true", "false"],
                 selectedItemText: "Offer ?",
                 onSelected: (selectedValue) {
                   print(selectedValue);
                 },
+              ),
+              SizedBox(height: 30),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.indigoAccent,
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {},
+                child: Text("Add Product"),
               ),
             ],
           ),
