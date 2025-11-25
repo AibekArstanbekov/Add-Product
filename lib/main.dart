@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_new_projeckt/Pages/home_page.dart';
+import 'package:flutter_new_projeckt/controller/home_controller.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
+  //? registering my  controller
+  Get.put(HomeController());
   runApp(const MyApp());
 }
 
